@@ -7,11 +7,18 @@ from flights.models import Havaalanlari, Ucuslar
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 # Create your views here.
+@api_view(['POST'])
+def airport_create(req):
+    serialize = HavaalanlariSerializer(data = req.data)
+    if serialize.is_valid():
+        serialize.save()
+        return Response(serialize.data)
+    else:
+        return Response(serialize.errors)
 
-def create(req):
+@api_view(['POST'])
+def flight_create(req):
     pass
-
-
 
 @api_view(['GET'])
 def search_airport(req):

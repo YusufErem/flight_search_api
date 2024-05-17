@@ -5,6 +5,8 @@ class HavaalanlariSerializer(serializers.ModelSerializer):
     class Meta:
         model = Havaalanlari
         fields = '__all__'
+    def create(self, validated_data):
+        return Havaalanlari.objects.create(**validated_data)
 
 class UcuslarSerializer(serializers.ModelSerializer):
     kalkis_havaalani = HavaalanlariSerializer()
