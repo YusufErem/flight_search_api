@@ -4,17 +4,19 @@ from flights.models import *
 class HavaalanlariSerializer(serializers.ModelSerializer):
     class Meta:
         model = Havaalanlari
-        fields = '__all__'
-    def create(self, validated_data):
-        return Havaalanlari.objects.create(**validated_data)
+        fields = ['id','sehir']
+
 
 class UcuslarSerializer(serializers.ModelSerializer):
-    kalkis_havaalani = HavaalanlariSerializer()
-    varis_havaalani = HavaalanlariSerializer()
-
-    class Meta:
+    kalkis_havaalani = serializers.PrimaryKeyRelatedField(queryset=Havaalanlari.objects.all())
+    varis_havaalani = serializers.PrimaryKeyRelatedField(queryset=Havaalanlari.objects.all())
+    
+    
+  
+    class Meta: 
         model = Ucuslar
-        fields = '__all__'
+        fields = ['id','kalkis_havaalani', 'varis_havaalani', 'kalkis_zamani', 'donus_zamani', 'fiyat']
+        
 
     
 
