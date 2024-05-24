@@ -1,5 +1,4 @@
--Python 3.10.12
--psql (PostgreSQL) 16.2
--libpq-dev 16.3
--python3-dev 3.10.6-1~22.04
-
+Django>=3.2,<4.0
+djangorestframework>=3.12,<3.14
+psycopg2>=2.9.3,<2.10
+python-dotenv>=0.19.2,<0.20
