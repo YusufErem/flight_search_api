@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Search API</title>
 </head>
 <body>
     <h1>Flight Search API</h1>
@@ -34,7 +33,7 @@ pip install -r requirements.txt</code></pre>
 CREATE DATABASE flightsearch;
 CREATE USER flightsearchuser WITH PASSWORD 'yourpassword';
 GRANT ALL PRIVILEGES ON DATABASE flightsearch TO flightsearchuser;
-\q</code></pre>
+</code></pre>
     <h3>Set up environment variables for database configuration in your <code>.env</code> file:</h3>
     <pre><code>DATABASE_NAME=flightsearch
 DATABASE_USER=flightsearchuser
