@@ -1,4 +1,0 @@
-Django>=3.2,<4.0
-djangorestframework>=3.12,<3.14
-psycopg2>=2.9.3,<2.10
-Python >=3.10.12
