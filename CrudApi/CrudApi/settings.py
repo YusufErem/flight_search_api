@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'CrudApi.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'flights',
+        'NAME': 'flightsearch',
         'USER': 'postgres',
         'PASSWORD': '456456',
         'HOST': 'localhost',  # veya veritabanı sunucusunun IP adresi
