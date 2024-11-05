@@ -39,7 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'flights',
     'rest_framework',
+    'rest_framework_simplejwt',
+
+
 ]
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': ( 
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,7 +89,7 @@ WSGI_APPLICATION = 'CrudApi.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'flights',
+        'NAME': 'flightsearch',
         'USER': 'postgres',
         'PASSWORD': '456456',
         'HOST': 'localhost',  # veya veritabanı sunucusunun IP adresi
